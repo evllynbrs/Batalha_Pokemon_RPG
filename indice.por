@@ -1,19 +1,39 @@
 programa {
   inclua biblioteca Graficos --> graficos
   inclua biblioteca Util --> util
+  const inteiro LARGURA = 800
+  const inteiro ALTURA = 500
     funcao inicio () {
       // Estas funcionalidades de biblioteca de gráficos são para criar a tela do jogo
       graficos.iniciar_modo_grafico(verdadeiro)
-      graficos.definir_dimensoes_janela(800, 500)
+      graficos.definir_dimensoes_janela(LARGURA, ALTURA)
       graficos.definir_titulo_janela("Batalha Pokémon RPG")
+      /**
+       * Tipos de variáveis:
+       * inteiro = tipo responsável por conter números inteiros, sem casa decimal, exemplo: idade = 18
+       * real = tipo responsável por conter números com casas decimais, exemplo: preço = 5.99
+       * caractere = tipo responsável por conter apenas um caracter, exemplo: sexo = 'M'
+       * cadeia = tipo responsável por conter texto, exemplo: nome = João
+       * logico = tipo responsável por conter valores lógicos, exemplo: cadastrado = falso
+       * vazio = tipo responsável para executar funções que não retornam valor, exemplo: função escreva
+       */
 
+      cadeia nome_meu_pokemon = "Pikachu"
+      inteiro hp_meu_pokemon = 100
+      inteiro max_hp_meu_pokemon = 100
+
+      // Informações do pokémon inimigo
+      cadeia nome_pokemon_inimigo = "Gengar"
+      inteiro hp_pokemon_inimigo = 120
+      inteiro hp_max_pokemon_inimigo = 120
+      
       // Desenho do céu da tela
       graficos.definir_cor(graficos.criar_cor(150, 216, 250))
-      graficos.desenhar_retangulo(0, 0, 800, 260, falso, verdadeiro)
+      graficos.desenhar_retangulo(0, 0, LARGURA, 260, falso, verdadeiro)
 
       // Desenho da grama da tela do jogo
       graficos.definir_cor(graficos.criar_cor(120, 190, 100))
-      graficos.desenhar_retangulo(0, 260, 800, 240, falso, verdadeiro)
+      graficos.desenhar_retangulo(0, 260, LARGURA, 240, falso, verdadeiro)
 
       // Desenhar a grama do pokémon inimigo
       graficos.definir_cor(graficos.criar_cor(90, 130, 80))
